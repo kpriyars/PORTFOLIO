@@ -1,6 +1,6 @@
 import './App.css'
 import Carvalho from './sections/Carvalho/Carvalho'; 
-import PhotoSlideshow from './sections/PhotoSlideshow/PhotoSlideshow';
+import Glitter from './sections/Glitter/Glitter'; // 1. Import it
 import Contact from './sections/Contact/Contact';
 import Footer from './sections/Footer/Footer';
 import Projects from './sections/Projects/Projects';
@@ -10,14 +10,18 @@ function App() {
 
   return (
     <>
+      <Glitter /> {/* 2. Add it at the top */}
       <Carvalho />
-      <PhotoSlideshow /> {/* ADDED THIS LINE */}
       <Projects />
       <Skills />
       <Contact />
       <Footer />
     </>
   );
+  
+} 
+
+export default App;
   
 } 
 
