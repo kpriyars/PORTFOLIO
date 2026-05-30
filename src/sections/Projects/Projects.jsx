@@ -1,1 +1,46 @@
+import styles from './ProjectsStyles.module.css';
+import ProjectCard from '../../common/ProjectCard';
+import { useContext } from 'react';
+import { LanguageContext } from '../../common/LanguageContext';
 
+// Import your 3 PNG files here
+import retinaScanImg from '../../assets/retinaScan.png';
+import hateSpeechImg from '../../assets/hateSpeech.png';
+import cancerDrugImg from '../../assets/cancerDrug.png';
+
+function Projects() {
+    const { texts } = useContext(LanguageContext);
+
+    return (
+        <section id='projects' className={styles.container}>
+            <h1 className='sectionTitle'>{texts.projects.title}</h1>
+            <div className={styles.projectsContainer}>
+                {/* RetinaScan AI */}
+                <ProjectCard
+                    src={retinaScanImg}
+                    link="https://retinascanai.streamlit.app" 
+                    h3="RetinaScan AI"
+                    p={texts.projects.retinaScan}
+                />
+
+                {/* Multilingual Hate Speech Detection */}
+                <ProjectCard
+                    src={hateSpeechImg}
+                    link="https://github.com/kpriyars" 
+                    h3="Multilingual Hate Speech Detection"
+                    p={texts.projects.hateSpeech}
+                />
+
+                {/* Cancer Drug Response Prediction */}
+                <ProjectCard
+                    src={cancerDrugImg}
+                    link="https://github.com/kpriyars" 
+                    h3="Cancer Drug Response Prediction"
+                    p={texts.projects.cancerDrug}
+                />
+            </div>
+        </section>
+    );
+}
+
+export default Projects;
