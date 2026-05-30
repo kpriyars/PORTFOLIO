@@ -9,8 +9,7 @@ import hateSpeechImg from '../../assets/hateSpeech.png';
 import cancerDrugImg from '../../assets/cancerDrug.png';
 
 function Projects() {
-    const { texts } = useContext(LanguageContext);
-
+     const { texts } = useContext(LanguageContext);
     return (
         <section id='projects' className={styles.container}>
             <h1 className='sectionTitle'>{texts.projects.title}</h1>

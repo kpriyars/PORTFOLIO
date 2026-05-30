@@ -8,7 +8,7 @@ function Footer() {
 
   return (
     <section id='footer' className={styles.container} >
-        <p>&copy; 2026 krishna priya . <br />
+        <p>&copy; 2026 krishna priya R S. <br />
           {texts.footer.rights}
         </p>
     </section>
